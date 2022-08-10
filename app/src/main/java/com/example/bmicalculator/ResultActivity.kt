@@ -19,7 +19,7 @@ class ResultActivity : AppCompatActivity() {
             val bmicalculate = String.format("%.2f", bmical).toFloat()
             displayResult(bmicalculate)
         recalculate.setOnClickListener {
-            val intent =Intent(this,StartActivity::class.java)
+            val intent =Intent(this,MainActivity::class.java)
         startActivity(intent)}
     }
 
