@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">BMICalculator</string>
+    <string name="male">MALE</string>
+    <string name="female">FEMALE</string>
+    <string name="height">Height</string>
+    <string name="_0">0</string>
+    <string name="cm">Cm</string>
+    <string name="weight">Weight</string>
+    <string name="Zero">0</string>
+    <string name="kg">Kg</string>
+    <string name="age">AGE</string>
+    <string name="_0Zero">0</string>
+    <string name="calculate">Calculate</string>
+    <string name="todo">TODO</string>
+    <string name="next">Next</string>
+    <string name="calculate_bmi">CALCULATE BMI</string>
+    <string-array name="Weight_unit_list">
+        <item>pound</item>
+        <item>KG</item>
+        <item>gram</item>
+        <item>Stones</item>
+        <item>Ounces</item>
+    </string-array>
+    <string-array name="height_unit_list">
+        <item>centimeter</item>
+        <item>Meter</item>
+        <item>inches</item>
+        <item>feet</item>
+        <item>yards</item>
+        <item>feet/inches</item>
+        <item>meter/cm</item>
+        <item>yards</item>
+    </string-array>
+
+
+</resources>
