@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             val weighttext = weight.text.toString()
             val heighttext = height.text.toString()
             val agetext=age.text.toString()
-            if (validateInput(weighttext, heighttext,agetext)) {
+            if (inputValidation(weighttext, heighttext,agetext)) {
                 val intent = Intent(this, ResultActivity::class.java)
                 intent.putExtra("WEIGHT", weighttext)
                 intent.putExtra("Height", heighttext)
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         }
-    private fun validateInput(weighttext: String?, heighttext: String?,agetext:String?): Boolean {
+    private fun inputValidation(weighttext: String?, heighttext: String?,agetext:String?): Boolean {
         when {
             weighttext.isNullOrEmpty() -> {
                 Toast.makeText(this, "Weight is empty", Toast.LENGTH_LONG).show()

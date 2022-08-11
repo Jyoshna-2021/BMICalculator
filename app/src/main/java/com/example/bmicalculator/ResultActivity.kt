@@ -17,13 +17,13 @@ class ResultActivity : AppCompatActivity() {
         val getheight = intent.getStringExtra("Height")
         val bmical = getweight!!.toFloat() / ((getheight!!.toFloat() / 100) * (getheight.toFloat() / 100))
             val bmicalculate = String.format("%.2f", bmical).toFloat()
-            displayResult(bmicalculate)
+        bmiResult(bmicalculate)
         recalculate.setOnClickListener {
             val intent =Intent(this,MainActivity::class.java)
         startActivity(intent)}
     }
 
-    private fun displayResult(bmical: Float) {
+    private fun bmiResult(bmical: Float) {
         val getage= intent.getStringExtra("AGE")
 
         val resultIndex = findViewById<TextView>(R.id.tvIndex)
