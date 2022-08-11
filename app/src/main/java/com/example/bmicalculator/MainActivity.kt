@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                 return false
             }
             agetext.isNullOrEmpty() -> {
-                Toast.makeText(this, "Height is empty", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "age is empty", Toast.LENGTH_LONG).show()
                 return false
             }
             else -> {
