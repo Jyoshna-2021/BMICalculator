@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ResultActivity">
@@ -49,12 +55,13 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="451dp"
+                android:layout_height="450dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/bmichart" />
+                app:srcCompat="@drawable/ic_bmichart"
+                android:contentDescription="TODO" />
 
             <Button
-                android:id="@+id/re_btn"
+                android:id="@+id/reBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/button_background"
@@ -65,3 +72,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

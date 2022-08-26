@@ -3,22 +3,21 @@ package com.example.bmicalculator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.databinding.DataBindingUtil
+import com.example.bmicalculator.databinding.ActivityResultBinding
 
 class ResultActivity : AppCompatActivity() {
-    private lateinit var recalculate:Button
+    private lateinit var binding: ActivityResultBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_result)
-        recalculate=findViewById(R.id.re_btn)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_result)
         val getweight = intent.getStringExtra("WEIGHT")
         val getheight = intent.getStringExtra("Height")
         val bmical = getweight!!.toFloat() / ((getheight!!.toFloat() / 100) * (getheight.toFloat() / 100))
             val bmicalculate = String.format("%.2f", bmical).toFloat()
         bmiResult(bmicalculate)
-        recalculate.setOnClickListener {
+        binding.reBtn.setOnClickListener {
             val intent =Intent(this,MainActivity::class.java)
         startActivity(intent)}
     }
@@ -26,9 +25,9 @@ class ResultActivity : AppCompatActivity() {
     private fun bmiResult(bmical: Float) {
         val getage= intent.getStringExtra("AGE")
 
-        val resultIndex = findViewById<TextView>(R.id.tvIndex)
-            val resultDescription = findViewById<TextView>(R.id.tvResult)
-            val info = findViewById<TextView>(R.id.tvInfo)
+        val resultIndex = binding.tvIndex
+            val resultDescription = binding.tvResult
+            val info = binding.tvInfo
 
             resultIndex.text = bmical.toString()
         "(Normal range is 18.5 - 24.9 )".also { info.text = it }
@@ -52,8 +51,9 @@ class ResultActivity : AppCompatActivity() {
                     resultText = "Obese"
                     color = R.color.obese
                 }
-                bmical>35.99->{
+                bmical > 35.99->{
                     resultText="Extremely Obese"
+                    color = R.color.extremelyobese
                 }
             }
         }

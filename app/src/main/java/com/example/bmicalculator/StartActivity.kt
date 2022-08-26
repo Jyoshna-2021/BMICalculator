@@ -3,15 +3,15 @@ package com.example.bmicalculator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import androidx.databinding.DataBindingUtil
+import com.example.bmicalculator.databinding.ActivityStartBinding
 
 class StartActivity : AppCompatActivity() {
-    private lateinit var button:Button
+    private lateinit var binding: ActivityStartBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_start)
-        button = findViewById(R.id.next)
-        button.setOnClickListener {
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_start)
+        binding.next.setOnClickListener {
             val intent= Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
